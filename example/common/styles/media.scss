@@ -1,0 +1,175 @@
+.vue-left,
+.vue-header,
+.vue-top,
+.vue-logo,
+.vue-layout,
+.login-logo,
+.vue-main {
+  transition: all .3s;
+}
+
+.vue-contain {
+  width: 100%;
+  height: 100vh;
+  background-size: 100%;
+  background: #f2f5f7 no-repeat;
+}
+.vue-layout{
+  height: calc(100% - 50px);
+}
+.vue-main {
+  width: calc(100%);
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+.vue-left {
+  // position: fixed;
+  left: 0;
+  top: 0;
+  // width: 240px;
+  // height: 100%;
+  width: 100%;
+  // height: 80px;
+  z-index: 1025;
+}
+
+.vue--collapse {
+  .vue-left,
+  .vue-logo {
+    width: 60px;
+  }
+
+  .vue-header {
+    padding-left: 60px;
+  }
+
+  .vue-main {
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+}
+
+.vue-header {
+  // padding-left: 240px;
+  width: 100%;
+  // background-color: #fff;
+  background-color: #f2f5f7;
+  box-sizing: border-box;
+}
+
+
+
+.vue-view {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.vue-footer {
+  margin: 0 auto;
+  padding: 0 22px;
+  width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    margin-left: -50px;
+  }
+
+  .copyright {
+    color: #666;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+
+.vue-shade {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .3);
+  z-index: 1024;
+
+  &--show {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  $width: 240px;
+  // ele的自适应
+  .el-dialog,
+  .el-message-box {
+    width: 98% !important;
+  }
+  //登录页面
+  .login-left {
+    display: none !important;
+  }
+  .login-logo {
+    padding-top: 30px !important;
+    margin-left: -30px;
+  }
+  .login-weaper {
+    margin: 0 auto;
+    width: 96% !important;
+  }
+  .login-border {
+    border-radius: 5px;
+    padding: 40px;
+    margin: 0 auto;
+    float: none !important;
+    width: 100% !important;
+  }
+  .login-main {
+    width: 100% !important;
+  }
+  //主框架
+  .vue-tags {
+    // display: none;
+  }
+  .vue-left,
+  .vue-logo {
+    // left: -$width;
+  }
+  .vue-main {
+    left: 0;
+    width: 100%;
+  }
+  .vue-header {
+    // margin-bottom: 15px;
+    // padding-left: 15px;
+  }
+  .top-bar__item {
+    display: none;
+  }
+  .vue--collapse {
+    .vue-left,
+    .vue-logo {
+      width: $width;
+      left: 0;
+    }
+
+    .vue-main {
+      left: $width;
+      width: 100%;
+    }
+
+    .vue-header {
+      padding: 0;
+      transform: translate3d(230px, 0, 0);
+    }
+
+    .vue-shade {
+      display: block;
+    }
+  }
+}

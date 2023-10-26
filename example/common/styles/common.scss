@@ -1,0 +1,42 @@
+// ele样式覆盖
+@import './element-ui.scss';
+// 工具类函数
+@import './mixin.scss';
+// 动画
+@import './animate/vue-transition.scss';
+//适配
+@import './media.scss';
+//通用配置
+@import './normalize.scss';
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+* {
+    outline: none;
+}
+
+// 关于 图标 CSS 的设置
+[class^="icon-"] {
+    font-family: "iconfont" !important;
+    /* 以下内容参照第三方图标库本身的规则 */
+    font-size: 14px !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.text-overflow-hidden {
+    overflow: hidden;
+    /*超出部分隐藏*/
+    white-space: nowrap;
+    /*禁止换行*/
+    text-overflow: ellipsis;
+    /*省略号*/
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
