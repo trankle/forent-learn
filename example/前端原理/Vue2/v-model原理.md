@@ -1,3 +1,14 @@
+# 数据双向绑定
+- Vue2：
+object.defineProperty setter getter 重写
+数组：重写数组原型方法
+
+- Vue3使用proxy代理
+优势
+1.监听数组变化;索引/length属性
+2.set函数监听动态增/删的属性
+3.省去for in循环
+
 # 表单实现双向绑定
     * v-bind绑定一个value属性
     * v-on指令给当前元素绑定input事件
@@ -5,7 +16,7 @@
 
 # 组件实现双向绑定
     * 子组件创建 value 属性可以拿到父组件传递下来的值
-    * 子组件内部更改 value 的时候，必须通过 ¥emit 派发一个 input 事件，并携最新的值
+    * 子组件内部更改 value 的时候，必须通过 $emit 派发一个 input 事件，并携最新的值
     * v-model 会自动监听 input 事件，把接收到的最新的值同步赋值到 v-model 绑定的变量上
 
 <子组件 v-model="父组件定义的变量值" />
