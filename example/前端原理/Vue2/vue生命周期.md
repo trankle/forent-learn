@@ -23,7 +23,7 @@ vue3
 <!-- mounted -->
 *Dom*挂载完毕、完成数据双向绑定、可 $refs 属性获取dom
 # nextick 浏然器渲染原理
-Vue是异步执行dom更新的，一旦观察到数据变化，Vue就会开启一个队列，然后把在同一个事件循环中 观察到数据变化 推送进这个队列，统一更新。
+Vue是异步执行dom更新的，一旦观察到数据变化，Vue就会开启一个队列，然后把在同一个事件循环中 *观察到数据变化* 推送进这个队列，统一更新。
 Event Loop 异步执行的任务又分为宏任务和微任务，无论是执行宏任务还是微任务，完成后都会进入到一下tick，并在两个tick之间进行UI渲染。
 ## nextTick和setTimeout的比较
 nextTick源码中利用的是Promise.resolve()实现的，区别在于setTimeout是宏任务，nextTick是微任务

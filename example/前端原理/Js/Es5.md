@@ -9,7 +9,7 @@
 引用类型数据在栈内存中保存的实际上是对象在堆内存中的引用地址，通过这个引用地址可以快速查找到保存中堆内存中的对象。
 ## 数据类型判断
 typeof 区分基本类型 string、number、boolean、undefined、function || object
-instanceof 区分引用类型 array、objects
+instanceof 区分引用类型 array、object
 Object.prototype.toString.call(obj)
 obj.__proto__.constructor
 ## array方法
